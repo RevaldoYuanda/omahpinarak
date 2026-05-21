@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omahpinarak.vercel.app/sitemap.xml
