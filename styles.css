@@ -75,12 +75,19 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
+  /* center the nav within the header and give a subtle background */
+  flex: 1 1 auto;
+  justify-content: center;
+  background: rgba(255,255,255,0.02);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
 }
 
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
+  padding: 0.45rem 0.6rem;
 }
 
 .nav-links a:hover {
@@ -383,6 +390,8 @@ img {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
