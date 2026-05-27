@@ -371,19 +371,30 @@ img {
     grid-template-columns: 1fr;
   }
   .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
+    /* keep header items in a row but allow wrapping when space is tight */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
   }
   .nav-links {
     gap: 0.9rem;
+    /* prefer a single horizontal row with overflow on very small screens */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
 @media (max-width: 640px) {
-  .button,
-  .nav-links a {
+  /* keep buttons full-width for easy tapping, but keep nav links inline */
+  .button {
     width: 100%;
+  }
+  .nav-links a {
+    width: auto;
     text-align: center;
+    white-space: nowrap;
   }
   .hero-actions {
     flex-direction: column;
